@@ -1,5 +1,5 @@
 import hyper
-import imp
+import importlib as imp
 import pytest
 import sys
 

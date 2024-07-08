@@ -1,6 +1,15 @@
 Release History
 ===============
 
+v0.8.0 (2024-07-08)
+-------------------
+
+*Changes*
+
+- Dropped support for Python < 3.8
+- Ensure support for Python 3.12
+
+
 v0.7.0 (2016-09-27)
 -------------------
 

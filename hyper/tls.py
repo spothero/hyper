@@ -43,14 +43,6 @@ def wrap_socket(sock, server_hostname, ssl_context=None, force_proto=None):
 
     # the spec requires SNI support
     ssl_sock = _ssl_context.wrap_socket(sock, server_hostname=server_hostname)
-    # Setting SSLContext.check_hostname to True only verifies that the
-    # post-handshake servername matches that of the certificate. We also need
-    # to check that it matches the requested one.
-    if _ssl_context.check_hostname:  # pragma: no cover
-        try:
-            ssl.match_hostname(ssl_sock.getpeercert(), server_hostname)
-        except AttributeError:
-            ssl.verify_hostname(ssl_sock, server_hostname)  # pyopenssl
 
     # Allow for the protocol to be forced externally.
     proto = force_proto

@@ -2,21 +2,16 @@
 Hyper: HTTP/2 Client for Python
 ===============================
 
-.. image:: https://raw.github.com/Lukasa/hyper/development/docs/source/images/hyper.png
+This package is only maintained for compatibility with Django Push Notifications. It is not to be used in new projects.
 
-.. image:: https://travis-ci.org/Lukasa/hyper.png?branch=master
-    :target: https://travis-ci.org/Lukasa/hyper
+``hyper`` is a Python package that provides an HTTP/2 client implementation.
 
-HTTP is changing under our feet. HTTP/1.1, our old friend, is being
-supplemented by the brand new HTTP/2 standard. HTTP/2 provides many benefits:
-improved speed, lower bandwidth usage, better connection management, and more.
-
-``hyper`` provides these benefits to your Python code. How? Like this::
+An example of usage is::
 
     from hyper import HTTPConnection
 
-    conn = HTTPConnection('http2bin.org:443')
-    conn.request('GET', '/get')
+    conn = HTTPConnection('nghttp2.org:443')
+    conn.request('GET', '/httpbin/')
     resp = conn.get_response()
 
     print(resp.read())
@@ -27,9 +22,7 @@ Caveat Emptor!
 ==============
 
 Please be warned: ``hyper`` is in a very early alpha. You *will* encounter bugs
-when using it. In addition, there are very many rough edges. With that said,
-please try it out in your applications: I need your feedback to fix the bugs
-and file down the rough edges.
+when using it. In addition, there are very many rough edges.
 
 Versions
 ========
@@ -54,18 +47,6 @@ Looking to learn more? Documentation for ``hyper`` can be found on `Read the Doc
 
 .. _Read the Docs: http://hyper.readthedocs.io/en/latest/
 
-Contributing
-============
-
-``hyper`` welcomes contributions from anyone! Unlike many other projects we are
-happy to accept cosmetic contributions and small contributions, in addition to
-large feature requests and changes.
-
-Before you contribute (either by opening an issue or filing a pull request),
-please `read the contribution guidelines`_.
-
-.. _read the contribution guidelines: http://hyper.readthedocs.org/en/development/contributing.html
-
 License
 =======
 
@@ -75,5 +56,5 @@ License
 Authors
 =======
 
-``hyper`` is maintained by Cory Benfield, with contributions from others. For
-more details about the contributors, please see ``CONTRIBUTORS.rst``.
+``hyper`` was originally maintained by Cory Benfield, with contributions from others. This fork is only maintained for
+Python compatibility.
